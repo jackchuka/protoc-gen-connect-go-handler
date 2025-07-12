@@ -1,0 +1,23 @@
+package {{.PackageName}}
+
+{{- if eq .Mode "per_service"}}
+import (
+	"context"
+	"errors"
+
+	"connectrpc.com/connect"
+	{{- if .ProtoImport}}
+	"{{.ProtoImport}}"
+	{{- end}}
+)
+{{- end}}
+
+// {{.StructName}} handles {{.Service.Name}} RPCs
+type {{.StructName}} struct {
+	// Add your dependencies here (DB, logger, etc.)
+}
+
+// New{{.StructName}} creates a new {{.StructName}} handler
+func New{{.StructName}}() *{{.StructName}} {
+	return &{{.StructName}}{}
+}

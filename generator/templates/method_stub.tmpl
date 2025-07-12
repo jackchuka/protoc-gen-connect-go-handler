@@ -1,0 +1,20 @@
+package {{.PackageName}}
+
+import (
+	"context"
+	"errors"
+
+	"connectrpc.com/connect"
+	{{- if .ProtoImport}}
+	"{{.ProtoImport}}"
+	{{- end}}
+)
+
+// {{.Method.Name}} implements the {{.Method.Name}} RPC
+func ({{.Receiver}} *{{.StructName}}) {{.Method.Name}}(
+	ctx context.Context,
+	req *connect.Request[{{.Method.Input}}],
+) (*connect.Response[{{.Method.Output}}], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented,
+		errors.New("{{.Method.Name}} not implemented"))
+}

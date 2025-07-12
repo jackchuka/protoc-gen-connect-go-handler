@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package test.v1;
+
+option go_package = "test/testv1";
+
+// TestService provides test functionality
+service TestService {
+  // Echo returns the input message
+  rpc Echo(EchoRequest) returns (EchoResponse);
+  
+  // EchoSummary aggregates previous echoes
+  rpc EchoSummary(EchoSummaryRequest) returns (EchoSummaryResponse);
+}
+
+message EchoRequest {
+  string message = 1;
+}
+
+message EchoResponse {
+  string message = 1;
+}
+
+message EchoSummaryRequest {
+  repeated string messages = 1;
+}
+
+message EchoSummaryResponse {
+  string summary = 1;
+}

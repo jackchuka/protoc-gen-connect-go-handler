@@ -1,0 +1,18 @@
+version: v2
+plugins:
+  - remote: buf.build/protocolbuffers/go:v1.31.0
+    out: gen
+    opt: paths=source_relative
+  - remote: buf.build/connectrpc/go:v1.11.1
+    out: gen
+    opt: paths=source_relative
+
+  # Example of how to use the connect-handler plugin with service mode
+  - local: protoc-gen-connect-go-handler
+    out: gen/per_service
+    opt: out=gen/per_service,mode=per_service,impl_suffix=_service
+
+  # Example of how to use the connect-handler plugin with method mode
+  - local: protoc-gen-connect-go-handler
+    out: gen/per_method
+    opt: out=gen/per_method,mode=per_method,dir_pattern={package_path}/{service_snake}
