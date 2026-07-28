@@ -2,9 +2,9 @@
 
 A protoc plugin that generates ConnectRPC handler skeletons from `.proto` definitions **without ever overwriting developer code**.
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/jackchuka/protoc-gen-connect-go-handler.svg)](https://pkg.go.dev/github.com/jackchuka/protoc-gen-connect-go-handler)
-[![Go Report Card](https://goreportcard.com/badge/github.com/jackchuka/protoc-gen-connect-go-handler)](https://goreportcard.com/report/github.com/jackchuka/protoc-gen-connect-go-handler)
-[![CI](https://github.com/jackchuka/protoc-gen-connect-go-handler/actions/workflows/test.yml/badge.svg)](https://github.com/jackchuka/protoc-gen-connect-go-handler/actions/workflows/test.yml)
+[![Test](https://github.com/jackchuka/protoc-gen-connect-go-handler/actions/workflows/test.yml/badge.svg)](https://github.com/jackchuka/protoc-gen-connect-go-handler/actions/workflows/test.yml)
+[![Release](https://img.shields.io/github/v/release/jackchuka/protoc-gen-connect-go-handler?sort=semver)](https://github.com/jackchuka/protoc-gen-connect-go-handler/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Features
 
