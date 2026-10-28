@@ -125,7 +125,7 @@ See the [example/](example/) directory for a complete working example with:
 
 ## Requirements
 
-- Go 1.24+
+- Go 1.27+
 - protoc
 - buf (recommended) or protoc with plugins
 
